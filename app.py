@@ -12,7 +12,7 @@ st.set_page_config(page_title="CRM Monterrey", layout="wide")
 # --- Autenticación con Google Sheets ---
 scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
 import json
-credenciales = json.loads(st.secrets["credenciales"])
+credenciales = (st.secrets["credenciales"])
 creds = ServiceAccountCredentials.from_json_keyfile_dict(credenciales, scope)
 client = gspread.authorize(creds)
 
